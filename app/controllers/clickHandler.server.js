@@ -31,7 +31,7 @@ function clickHandler() {
     };
 
     this.resetClicks = function (req, res) {
-        Clicks
+        Users
             .findOneAndUpdate({'github.id': req.user.github.id}, { 'nbrClicks.clicks': 0 })
             .exec(function (err, result) {
                     if (err) { throw err; }

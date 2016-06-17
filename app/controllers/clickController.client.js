@@ -8,19 +8,19 @@ function updateClickCount (data) {
   clickNbr.innerHTML = clicksObject.clicks;
 }
 
-ajaxfunctions.ready(ajaxfunctions.ajaxRequest('GET', apiUrl, updateClickCount));
+ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', apiUrl, updateClickCount));
 
 addButton.addEventListener('click', function () {
 
 
-  ajaxfunctions.ajaxRequest('POST', apiUrl, function () {
-    ajaxfunctions.ajaxRequest('GET', apiUrl, updateClickCount);
+  ajaxFunctions.ajaxRequest('POST', apiUrl, function () {
+    ajaxFunctions.ajaxRequest('GET', apiUrl, updateClickCount);
   });
 }, false);
 
 deleteButton.addEventListener('click', function () {
 
-  ajaxfunctions.ajaxRequest('DELETE', apiUrl, function () {
-    ajaxfunctions.ajaxRequest('GET', apiUrl, updateClickCount);
+  ajaxFunctions.ajaxRequest('DELETE', apiUrl, function () {
+    ajaxFunctions.ajaxRequest('GET', apiUrl, updateClickCount);
   });
 }, false);
